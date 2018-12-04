@@ -7,7 +7,7 @@ module.exports = {
     // https://github.com/vuejs/eslint-plugin-vue#bulb-rules
     'plugin:vue/recommended',
     // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-    'standard',
+    // 'standard',
     // https://github.com/prettier/eslint-config-prettier
     'prettier',
     'prettier/standard',
@@ -16,29 +16,29 @@ module.exports = {
     // Only allow debugger in development
     'no-debugger': process.env.PRE_COMMIT ? 'error' : 'off',
     // Only allow `console.log` in development
-    'no-console': process.env.PRE_COMMIT
-      ? ['error', { allow: ['warn', 'error'] }]
-      : 'off',
+    'no-console': process.env.PRE_COMMIT ? ['error', { allow: ['warn', 'error'] }] : 'off',
     'vue/component-name-in-template-casing': [
       'error',
       'PascalCase',
       {
-        ignores: [
-          'component',
-          'template',
-          'transition',
-          'transition-group',
-          'keep-alive',
-          'slot',
-          'router-view',
-          'router-link',
-        ],
+        ignores: ['component', 'template', 'transition', 'transition-group', 'keep-alive', 'slot', 'router-view', 'router-link'],
       },
     ],
     'vue/multiline-html-element-content-newline': 'error',
     'vue/singleline-html-element-content-newline': 'error',
     'vue/no-spaces-around-equal-signs-in-attribute': 'error',
     'vue/script-indent': ['off', null, { baseIndent: 0 }],
+    'vue/max-attributes-per-line': 'off',
+    // [
+    //   'error',
+    //   {
+    //     singleline: 3,
+    //     multiline: {
+    //       max: 3,
+    //       allowFirstLine: true,
+    //     },
+    //   },
+    // ],
   },
   overrides: [
     {
@@ -68,4 +68,4 @@ module.exports = {
       },
     },
   ],
-}
+};
